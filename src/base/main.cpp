@@ -1,14 +1,21 @@
-#include <window/create.hpp>
-#include <window/destroy.hpp>
-#include <keys/key.hpp>
-#include <renderer/render.hpp>
+#include <SkyWrapper.hpp>
+
+int power(int num, int thing){
+	int noom = 0;
+
+	for(int i = 0 ; i > thing; i++){
+		noom *= i;
+	}
+
+	return noom;
+}
 
 int main(int argc, char* argv[]){
 	bool isOpen = true;
 	window Window = {
 		"idk",
-		500,
 		800,
+		400,
 		true,
 		60
 	};
@@ -21,6 +28,7 @@ int main(int argc, char* argv[]){
 		}
 		// Game Loop
 		StartDrawing();
+
 		FinishDrawing();
 	}
 
